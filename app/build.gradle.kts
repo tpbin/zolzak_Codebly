@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.utils.analyticsEnabledProvider
+
 plugins {
     alias(libs.plugins.android.application)
 }
@@ -28,6 +30,11 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
     }
 }
 
