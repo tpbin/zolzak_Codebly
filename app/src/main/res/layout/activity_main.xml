@@ -11,48 +11,75 @@
         android:id="@+id/xmlLinear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/item_bg_outline"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="8dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <!-- 알림 텍스트뷰(버튼) -->
         <TextView
             android:id="@+id/viewTv"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="@string/views"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textSize="14dp"
-            android:paddingEnd="15dp"
-            android:paddingTop="5dp"
-            android:paddingStart="20dp"
-            android:paddingBottom="5dp"
+            android:layout_width="153dp"
+            android:layout_height="40dp"
             android:background="@drawable/item_bg_on"
-            tools:ignore = "Rt | Symmetry"
+            android:gravity="center"
+            android:paddingStart="20dp"
             android:paddingLeft="15dp"
-            android:paddingRight="10dp" />
+            android:paddingTop="5dp"
+            android:paddingEnd="15dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:text="@string/views"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            tools:ignore="Rt | Symmetry" />
 
+        <!-- 공지사항 텍스트뷰(버튼) -->
         <TextView
             android:id="@+id/subScriberTv"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="@string/subscriber"
-            android:textAlignment="center"
+            android:layout_height="40dp"
             android:gravity="center"
-            android:textSize="14dp"
             android:paddingStart="15dp"
+            android:paddingLeft="10dp"
             android:paddingTop="5dp"
             android:paddingEnd="20dp"
+            android:paddingRight="15dp"
             android:paddingBottom="5dp"
-            android:textColor="@color/text"
-            android:paddingLeft="10dp"
-            android:paddingRight="15dp" />
+            android:text="@string/subscriber"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:textColor="@color/text" />
 
     </LinearLayout>
+
+    <!-- 알림 텍스트뷰 -->
+    <TextView
+        android:id="@+id/viewContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:text="This is alert content"
+        app:layout_constraintTop_toBottomOf="@id/xmlLinear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone" />
+
+    <!-- 공지사항 텍스트뷰 -->
+    <TextView
+        android:id="@+id/subscriberContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:text="This is notice content"
+        app:layout_constraintTop_toBottomOf="@id/xmlLinear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
